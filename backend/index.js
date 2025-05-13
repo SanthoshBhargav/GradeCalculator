@@ -23,8 +23,11 @@ connectToDb((err)=>{
 })
 
 app.use(express.json());
+console.log("JSON enabled");
 app.use(cors(corsConfig));
+console.log("CORS enabled");
 app.options('', cors(corsConfig));
+console.log("CORS options enabled");
 app.get('/', (req, res) => {
     let spis = [] 
     console.log("Fetching SPIs");
