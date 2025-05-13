@@ -36,7 +36,7 @@ class SPI extends Component {
 
   fetchData = (spi) => {
     try{
-      fetch('http://localhost:5000',{
+      fetch('https://gradecalculator-backend-git-main-santhosh-bhargavs-projects.vercel.app/',{
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

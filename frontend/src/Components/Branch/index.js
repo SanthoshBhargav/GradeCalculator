@@ -72,7 +72,7 @@ class Dept extends Component {
     let sem = window.location.pathname.split('/')[3];
     if(sem === undefined) sem = 'IV';
     console.log(branch);
-    fetch(`http://localhost:5000/branches/${branch}/${sem}`, {
+    fetch(`https://gradecalculator-backend-git-main-santhosh-bhargavs-projects.vercel.app/branches/${branch}/${sem}`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json'

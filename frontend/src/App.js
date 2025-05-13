@@ -21,7 +21,7 @@ function App() {
       document.getElementById('email').value = '';
       document.getElementById('feedback').value = '';
     }
-    fetch('http://localhost:5000/feedback',{
+    fetch('https://gradecalculator-backend-git-main-santhosh-bhargavs-projects.vercel.app/feedback',{
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
