@@ -5,6 +5,7 @@ let MONGO_URL = 'mongodb+srv://santhoshbhargav:49lvx3c9@semcredits.wxfjjgd.mongo
 
 module.exports = {
     connectToDb: (cb) =>{
+        console.log("Connecting to DB");
         MongoClient.connect(`${MONGO_URL}/SemCredits`)
         .then((client) =>{
             dbConnection = client.db();
