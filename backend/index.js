@@ -21,7 +21,7 @@ app.use(cors());
 
 app.get('/', (req, res) => {
     let spis = [] 
-
+    console.log("Fetching SPIs");
     db.collection('SPIs')
     .find()
     .sort({spi:1})
