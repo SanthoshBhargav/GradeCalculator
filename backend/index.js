@@ -46,22 +46,19 @@ app.get('/branches/:branch/:sem', (req, res) => {
     let names = []
     let previousTotalCredits = 0;
     const { branch, sem } = req.params;
-    // console.log(branch);
-    db.collection(branch.toLocaleUpperCase())
-    .find({Semester: {$lt : sem} })
-    .forEach((doc) => {
-        previousTotalCredits+=(doc.Credits);
-    })
 
     db.collection(branch.toLocaleUpperCase())
-    .find({Semester:sem})
+    .find({Semester:{$lte: sem}})
     .sort({CourseNo:1})
     .forEach((doc) => {
-        credits.push(doc.Credits);
-        names.push(doc.CourseNo);
+        if(doc.Semester === sem){
+            credits.push(doc.Credits);
+            names.push(doc.CourseNo);
+        }else{
+            previousTotalCredits+=(doc.Credits);
+        }
     })
     .then(()=>{
-        console.log(previousTotalCredits);
         res.status(200).json({credits,names,previousTotalCredits});
     })
     .catch((err) => {
