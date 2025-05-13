@@ -1,0 +1,38 @@
+.branch{
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  border:#fcefef 1px solid;
+  padding: 5px 10px;
+  border-radius: 15px;
+  display: inline-block;
+  width: 20vw;
+  max-width: 150px;
+  background-image: linear-gradient(to right,#00439b,#4cbabe);
+}
+.branch:hover{
+    color: #5ce1e6;
+    cursor: pointer;
+}
+.branches{
+    margin: auto;
+    list-style-type: none ;
+    max-width: 60vw;
+    flex-wrap: wrap;
+    gap:20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.sem{
+  color-scheme: dark;
+  padding:5px 10px;
+  border-radius: 15px;
+  font-size: large;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-bottom: 20px;
+}
