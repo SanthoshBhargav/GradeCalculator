@@ -2,18 +2,18 @@
     "version": 2,
     "builds": [
     {
-    "src": "index.js",
+    "src": "./index.js",
     "use": "@vercel/node"
     }
     ],
     "routes": [
     {
     "src": "/(.*)",
-    "dest": "index.js"
+    "dest": "/"
     }
     ],
     "env": {
-    "MONGO_URL": "mongodb+srv://GSB:Qwertyuiop@semcredits.wxfjjgd.mongodb.net",
+    "MONGO_URL": "mongodb+srv://santhoshbhargav:49lvx3c9@semcredits.wxfjjgd.mongodb.net",
     "PORT": "5000"
     }
 }
