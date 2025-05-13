@@ -3,6 +3,11 @@ const cors = require('cors');
 const {connectToDb, getDb} = require('./db');
 
 const app = express();
+const corsConfig = {
+    origin: '*',
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    credentials: true,
+};
 let db;
 const PORT = 5000;
 connectToDb((err)=>{
@@ -17,8 +22,8 @@ connectToDb((err)=>{
 })
 
 app.use(express.json());
-app.use(cors());
-
+app.use(cors(corsConfig));
+app.options('', cors(corsConfig));
 app.get('/', (req, res) => {
     let spis = [] 
     console.log("Fetching SPIs");
