@@ -12,10 +12,11 @@ let db;
 const PORT = 5000;
 connectToDb((err)=>{
     if(!err){
-        app.listen(PORT, () => {
-            console.log("Server is running on port 5000");
+        app.listen(process.env.PORT || PORT, () => {
+            console.log("Server is running on port", PORT || process.env.PORT);
         });
         db = getDb();
+        console.log("Connected to DB");
     }else{
         console.log(err);
     }
