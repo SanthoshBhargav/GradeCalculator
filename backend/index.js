@@ -61,6 +61,7 @@ app.get('/branches/:branch/:sem', (req, res) => {
         names.push(doc.CourseNo);
     })
     .then(()=>{
+        console.log(previousTotalCredits);
         res.status(200).json({credits,names,previousTotalCredits});
     })
     .catch((err) => {
