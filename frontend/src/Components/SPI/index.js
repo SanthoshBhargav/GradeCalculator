@@ -36,7 +36,7 @@ class SPI extends Component {
 
   fetchData = (spi) => {
     try{
-      fetch('http://localhost:5000',{
+      fetch('https://gradecalculator-v3k5.onrender.com/',{
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

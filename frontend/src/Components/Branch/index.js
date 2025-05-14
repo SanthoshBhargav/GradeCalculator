@@ -37,7 +37,7 @@ class Dept extends Component {
   }
 
   fetchData = (spi) => {
-    fetch('http://localhost:5000',{
+    fetch('https://gradecalculator-v3k5.onrender.com',{
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -72,7 +72,7 @@ class Dept extends Component {
     let sem = window.location.pathname.split('/')[3];
     if(sem === undefined) sem = 'IV';
     console.log(branch);
-    fetch(`http://localhost:5000/branches/${branch}/${sem}`, {
+    fetch(`https://gradecalculator-v3k5.onrender.com/branches/${branch}/${sem}`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json'

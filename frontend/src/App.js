@@ -21,7 +21,7 @@ function App() {
       document.getElementById('email').value = '';
       document.getElementById('feedback').value = '';
     }
-    fetch('http://localhost:5000/feedback',{
+    fetch('https://gradecalculator-v3k5.onrender.com/feedback',{
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
