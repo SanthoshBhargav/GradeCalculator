@@ -97,6 +97,8 @@
   }
   .by{
     margin:10px 0;
+    color:#5ce1e6;
+    background-color: rgba(23, 24, 24, 0.8);
   }
 
   .by span{
