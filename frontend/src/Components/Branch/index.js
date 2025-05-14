@@ -37,7 +37,7 @@ class Dept extends Component {
   }
 
   fetchData = (spi) => {
-    fetch('https://gradecalculator-v3k5.onrender.com',{
+    fetch('https://grade-calculator-henna.vercel.app/',{
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -72,7 +72,7 @@ class Dept extends Component {
     let sem = window.location.pathname.split('/')[3];
     if(sem === undefined) sem = 'IV';
     console.log(branch);
-    fetch(`https://gradecalculator-v3k5.onrender.com/branches/${branch}/${sem}`, {
+    fetch(`https://grade-calculator-henna.vercel.app/branches/${branch}/${sem}`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json'
