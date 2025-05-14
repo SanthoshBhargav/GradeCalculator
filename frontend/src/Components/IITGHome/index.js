@@ -10,6 +10,7 @@ const [sem, setSem] = useState('IV');
 
 return (
     <div>
+        <p className="sem-p">Select Your Current Sem:</p>
         <select className="sem" onChange={(e) => setSem(e.target.value)} value={sem}>
             <option value="I">Sem I</option>
             <option value="II">Sem II</option>
