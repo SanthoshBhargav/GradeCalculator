@@ -36,7 +36,7 @@ class SPI extends Component {
 
   fetchData = (spi) => {
     try{
-      fetch('https://gradecalculator-v3k5.onrender.com/',{
+      fetch('https://grade-calculator-henna.vercel.app/',{
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

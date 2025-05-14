@@ -21,7 +21,7 @@ function App() {
       document.getElementById('email').value = '';
       document.getElementById('feedback').value = '';
     }
-    fetch('https://gradecalculator-v3k5.onrender.com/feedback',{
+    fetch('https://grade-calculator-henna.vercel.app/feedback',{
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
