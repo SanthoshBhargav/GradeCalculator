@@ -57,12 +57,13 @@ function App() {
       </BrowserRouter>
       <footer className="footer">
         <div>
-          <a href='https://github.com/SanthoshBhargav' target='_blank'><img  className='icons' src={ghIcon} alt="GitHub" width="30px" height="30px"/></a>
-          <a href='https://www.linkedin.com/in/santhosh-bhargav-gunta-b804132a9/' target='_blank'><img  className='icons' src={liIcon} alt="LinkedIn" width="30px" height="30px"/></a>
-          <a href='https://www.instagram.com/_santhosh_bhargav_/' target='_blank'><img className='icons' src={igIcon} alt='Instagram' height='28px' width='28px' /></a>
+          <a href='https://github.com/SanthoshBhargav' target='_blank' rel='noreferrer'><img  className='icons' src={ghIcon} alt="GitHub" width="30px" height="30px"/></a>
+          <a href='https://www.linkedin.com/in/santhosh-bhargav-gunta-b804132a9/' target='_blank' rel='noreferrer'><img  className='icons' src={liIcon} alt="LinkedIn" width="30px" height="30px"/></a>
+          <a href='https://www.instagram.com/_santhosh_bhargav_/' target='_blank' rel='noreferrer'><img className='icons' src={igIcon} alt='Instagram' height='28px' width='28px' /></a>
         </div>
         <div className="feedback">
           <h1>Give Feedback</h1> 
+          <p>(Or Send me an Anonymous Message)</p>
           <div>
             <img src={bramhi} alt='Bharmhi' height='250px' />
             <form onSubmit={feedbackSubmit}>

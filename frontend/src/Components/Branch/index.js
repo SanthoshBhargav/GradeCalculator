@@ -46,7 +46,7 @@ class Dept extends Component {
     })
   }
 
-  CalculateCPI = () => {
+  CalculateSPI = () => {
     const { credits, grades } = this.state;
     let totalCredits = 0;
     for (let i = 0; i < credits.length; i++) {
@@ -133,7 +133,7 @@ class Dept extends Component {
           ))}
           <button className="add-button" type="button" onClick={this.addCourse}>Add Course</button>
           <br></br>
-          <button className="submit-button" type="button" onClick={this.CalculateCPI}> Calculate S.P.I </button>
+          <button className="submit-button" type="button" onClick={this.CalculateSPI}> Calculate S.P.I </button>
         </form>
         <h2 className="creds">Previous Total Credits: {previousTotalCredits}</h2>
         {spi!=0 && <h1>your spi is : <span className="s1">{spi}</span></h1>}
