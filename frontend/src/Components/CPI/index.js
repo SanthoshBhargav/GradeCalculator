@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 // import { useParams, useMatch } from "react-router-dom";
 import { useSearchParams } from 'react-router-dom';
 import './style.css';
-import { get } from 'http';
 
 
 const CPI = (props) =>{
