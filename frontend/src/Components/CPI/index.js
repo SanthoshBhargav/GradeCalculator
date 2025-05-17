@@ -4,24 +4,24 @@ import { useSearchParams } from 'react-router-dom';
 import './style.css';
 import { get } from 'http';
 
-const getCpi = (cpi) => {
-    fetch('https://grade-calculator-henna.vercel.app/cpi',{
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({cpi})
-    })
-  }
+
 const CPI = (props) =>{
     const [cpi, setCpi] = useState(0);
     const [searchParams] = useSearchParams();
     const cc = searchParams.get('cc');
     const cspi = searchParams.get('cspi');
     const ptc = searchParams.get('ptc');
+    const getCpi = (cpi) => {
+        fetch('https://grade-calculator-henna.vercel.app/cpi',{
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({cpi})
+        })
+    }
     const calculateCpi = (e) => {
         e.preventDefault();
-        getCpi();
         const pcpi = parseFloat(document.getElementById('pcpi').value);
         const spi = parseFloat(document.getElementById('spi').value);
         const totalCredit = parseFloat(document.getElementById('totalCredit').value);
@@ -32,6 +32,7 @@ const CPI = (props) =>{
             return;
         }
         const cpi = ((pcpi * totalCredit) + (spi * currentCredit)) / (totalCredit + currentCredit);
+        getCpi(cpi);
         setCpi(cpi);
     }
     useEffect(()=>{
