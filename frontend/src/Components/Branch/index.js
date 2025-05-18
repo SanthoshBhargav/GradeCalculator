@@ -50,14 +50,14 @@ class Dept extends Component {
     const { credits, grades } = this.state;
     let totalCredits = 0;
     for (let i = 0; i < credits.length; i++) {
-      totalCredits += parseInt(credits[i]);
+      totalCredits += parseFloat(credits[i]);
     }
     console.log(credits, grades);
     let totalGradePoints = 0;
     for (let i = 0; i < credits.length; i++) {
-      let g = parseInt(grades[i]);
+      let g = parseFloat(grades[i]);
       if(g==11) g=10;
-      totalGradePoints += parseInt(credits[i]) * g;
+      totalGradePoints += parseFloat(credits[i]) * g;
       console.log(totalGradePoints);
     }
     let spi = totalGradePoints / totalCredits;
@@ -93,7 +93,7 @@ class Dept extends Component {
     const { spi, previousTotalCredits, credits } = this.state;
     let tc = 0;
     for (let i = 0; i < credits.length; i++) { 
-      tc += parseInt(credits[i]);
+      tc += parseFloat(credits[i]);
     }
     window.location.href = `/cpi?cspi=${spi}&ptc=${previousTotalCredits}&cc=${tc}`;
   }
@@ -106,7 +106,7 @@ class Dept extends Component {
     const { spi, credits, grades, names, previousTotalCredits } = this.state;
     let tc = 0;
     for (let i = 0; i < credits.length; i++) {
-      tc += parseInt(credits[i]);
+      tc += parseFloat(credits[i]);
     }
     return (
       <div className="Container">
