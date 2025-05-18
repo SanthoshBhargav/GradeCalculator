@@ -9,10 +9,11 @@
   display: inline-block;
   width: 20vw;
   max-width: 150px;
-  background-image: linear-gradient(to right,#00439b,#4cbabe);
+  background-image: linear-gradient(to right,rgb(88,88,88),rgb(20,20,20));
 }
 .branch:hover{
-    color: #5ce1e6;
+    color: #5c9fe6;
+    box-shadow: 0 0 2px 2px #5c9fe6;
     cursor: pointer;
 }
 .branches{

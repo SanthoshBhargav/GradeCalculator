@@ -52,6 +52,7 @@ function App() {
             <Route exact path="/branches" element={<IITGHome />} />
             <Route exact path="/branches/:branch/:sem" element={<Dept />} />
           </Routes>
+        <a className='pic-credits' href="https://www.instagram.com/adithya_hrx/" >Pic Credits: Allu Aditya </a>
           <p className='by'>Developed by <span>G.Santhosh Bhargav</span></p>
         </div>
       </BrowserRouter>

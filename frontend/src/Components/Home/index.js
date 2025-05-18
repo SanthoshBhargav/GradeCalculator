@@ -6,7 +6,7 @@ const Home = () =>{
         <div>
             <h1 className="h1 heading">Are you from IITG ?? then click below</h1>
             <div className="bg">
-                <Link className='link' to='/branches' ></Link>
+                <Link className='link' to='/branches' >IITG</Link>
             </div>
             <div className="bg2">
                 <Link className='link1' to='/branches' >IITG</Link>

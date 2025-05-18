@@ -5,7 +5,7 @@
 }
 .boxContainer{
     margin : 20px auto;
-    background-image: linear-gradient(to right,#004aad,#5ce1e6);
+    background-image: linear-gradient(to left,rgb(88,88,88),rgb(20,20,20));
     max-width : 700px;
     border-radius: 30px;
     box-shadow: 3px 3px 20px black;
@@ -38,7 +38,7 @@
     background-color: transparent;
     border: 2px solid ;
     border-color: gold goldenrod goldenrod gold;
-    background-image: linear-gradient(to right,#004aad,#5ce1e6);
+    background-image: linear-gradient(to right,rgb(88,88,88),rgb(20,20,20));
     border-radius: 30px;
     padding: 5px 10px;
     font-size: 20px;

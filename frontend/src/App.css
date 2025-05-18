@@ -6,11 +6,12 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Comic Relief', sans-serif;
+  color:whitesmoke;
 }
 
 .App {
   text-align: center;
-  background-image: linear-gradient(to left,#004aad,#5ce1e6);
+  background-image: linear-gradient(to right,rgb(88,88,88),rgb(20,20,20));
   min-height : 100vh;
   padding-bottom: 50px;
   min-width: 100vw;
@@ -93,7 +94,6 @@
   }
   .icons:hover{
     filter: brightness(100%);
-    transition: all 0.3s;
   }
   .by{
     margin:10px 0;
@@ -116,10 +116,13 @@
   }
   
   .feedback{
-    background-color: hsla(0, 100%, 70%, 0.336);
+    background-color: hsla(0, 22%, 50%, 0.153);
     padding-bottom: 8vh ;
     padding-top:1vh ;
     margin-bottom:0;
+    margin-left:2vw;
+    margin-right: 2vw;
+    border-radius: 1em;
   }
   .feedback h1{
     margin:30px auto 8px 0;
@@ -213,5 +216,8 @@
     }
   .feedback div{
     flex-direction: column;
+  }
+  .pic-credits{
+    display: none;
   }
   }
