@@ -16,7 +16,7 @@ const CPI = (props) =>{
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({cpi})
+        body: JSON.stringify(cpi)
         })
     }
     const calculateCpi = (e) => {
@@ -31,7 +31,7 @@ const CPI = (props) =>{
             return;
         }
         const cpi = ((pcpi * totalCredit) + (spi * currentCredit)) / (totalCredit + currentCredit);
-        getCpi(cpi);
+        getCpi({cpi, pcpi, spi, totalCredit, currentCredit});
         setCpi(cpi);
     }
     useEffect(()=>{
@@ -54,11 +54,11 @@ const CPI = (props) =>{
                 </div>
                 <div className="cpi-input">
                     <label htmlFor="credit">Previous Total Credits</label>
-                    <input type="number" id="totalCredit" placeholder="Enter Credit" />
+                    <input type="number" id="totalCredit" placeholder="Enter Credits" />
                 </div>
                 <div className="cpi-input">
                     <label htmlFor="credit">Current Semester Credits</label>
-                    <input type="number" id="currentCredit" placeholder="Enter Credit" />
+                    <input type="number" id="currentCredit" placeholder="Enter Credits" />
                 </div>
                 <button type="submit" className='submit-cpi' onClick={calculateCpi}>Calculate</button>
             </form>

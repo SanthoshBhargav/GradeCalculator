@@ -77,10 +77,10 @@ class SPI extends Component {
       tc += parseInt(credits[i]);
     }
     return (
-      <div className="container">
+      <div className="Container">
         <h1>Welcome to the S.P.I Calculator</h1>
         <p>Use this tool to calculate your grades easily!</p>
-        <form className="box-container">
+        <form className="boxContainer">
           <div className="headings">
             <h2 className="invisible">Course:</h2>
             <h2>Credits:</h2>

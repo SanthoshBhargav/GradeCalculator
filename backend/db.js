@@ -1,7 +1,7 @@
 const { MongoClient } = require('mongodb');
 
 let dbConnection;
-let MONGO_URL = 'mongodb+srv://santhoshbhargav:49lvx3c9@semcredits.wxfjjgd.mongodb.net';
+let MONGO_URL = process.env.MONGO_URL;
 
 module.exports = {
     connectToDb: (cb) =>{

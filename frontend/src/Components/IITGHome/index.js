@@ -18,7 +18,7 @@ return (
             <option value="V">Sem V</option>
             <option value="VI">Sem VI</option>
             <option value="VII">Sem VII</option>
-            <option value="VIII">Sem VII</option>
+            <option value="VIII">Sem VIII</option>
         </select>
         <h1 className="h1">Choose Your Branch</h1>
         <ul className="branches">
