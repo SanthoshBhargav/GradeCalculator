@@ -228,7 +228,4 @@
   .feedback div{
     flex-direction: column;
   }
-  .pic-credits{
-    display: none;
-  }
   }

@@ -61,11 +61,11 @@
 
 @media screen and (max-width: 600px) {
     .bg{
-        display: none;
+        /* display: none; */
         width:90vw;
     }
     .bg2{
-        display: block;
+        /* display: block; */
         width:fit-content;
         padding: 5px 10px;
         border: 1px white solid;
