@@ -122,9 +122,12 @@
     margin-bottom:0;
   }
   .feedback h1{
-    margin:30px auto;
+    margin:30px auto 8px 0;
     text-decoration: underline wavy wheat;
     text-underline-offset: 8px;
+  }
+  .feedback p{
+    margin-bottom:30px;
   }
   .feedback form{
     width:fit-content;

@@ -3,7 +3,7 @@
     padding: 0px;
     box-sizing: border-box;
 }
-.box-container{
+.boxContainer{
     margin : 20px auto;
     background-image: linear-gradient(to right,#004aad,#5ce1e6);
     max-width : 700px;
@@ -13,7 +13,7 @@
     align-items: center;
   }
 
-  .container{
+  .Container{
     align-items: center;
     margin-top: 7vh;
   }
@@ -85,12 +85,9 @@
     color:gold;
 }
 @media only screen and (max-width: 600px) {
-    .box-container{
-        max-width: 95%;
-    }
-    .container{
-        max-width: 96vw;
-        margin:auto;
+    .Container{
+        margin-left: 5vw;
+        margin-right: 5vw;
     }
     .submit-button{
         padding: 2px 7px;

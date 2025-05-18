@@ -3,12 +3,22 @@ import { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import './style.css';
 
+
 const CPI = (props) =>{
     const [cpi, setCpi] = useState(0);
     const [searchParams] = useSearchParams();
     const cc = searchParams.get('cc');
     const cspi = searchParams.get('cspi');
     const ptc = searchParams.get('ptc');
+    const getCpi = (cpi) => {
+        fetch('https://grade-calculator-henna.vercel.app/cpi',{
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(cpi)
+        })
+    }
     const calculateCpi = (e) => {
         e.preventDefault();
         const pcpi = parseFloat(document.getElementById('pcpi').value);
@@ -21,6 +31,7 @@ const CPI = (props) =>{
             return;
         }
         const cpi = ((pcpi * totalCredit) + (spi * currentCredit)) / (totalCredit + currentCredit);
+        getCpi({cpi, pcpi, spi, totalCredit, currentCredit});
         setCpi(cpi);
     }
     useEffect(()=>{
@@ -43,11 +54,11 @@ const CPI = (props) =>{
                 </div>
                 <div className="cpi-input">
                     <label htmlFor="credit">Previous Total Credits</label>
-                    <input type="number" id="totalCredit" placeholder="Enter Credit" />
+                    <input type="number" id="totalCredit" placeholder="Enter Credits" />
                 </div>
                 <div className="cpi-input">
                     <label htmlFor="credit">Current Semester Credits</label>
-                    <input type="number" id="currentCredit" placeholder="Enter Credit" />
+                    <input type="number" id="currentCredit" placeholder="Enter Credits" />
                 </div>
                 <button type="submit" className='submit-cpi' onClick={calculateCpi}>Calculate</button>
             </form>

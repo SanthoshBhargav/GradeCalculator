@@ -74,6 +74,18 @@ app.post('/', (req, res) => {
     });
 })
 
+app.post('/cpi', (req, res) => {   
+    const cpi = req.body;
+    db.collection('CPIs')
+    .insertOne(cpi)
+    .then(() => {
+        res.status(201).json(spi);
+    })
+    .catch((err) => {
+        res.status(500).json({error: 'Could not create the CPI'});
+    });
+})
+
 app.post('/feedback', (req, res) => {   
     const feedback = req.body;
     db.collection('FEEDBACKS')
