@@ -63,6 +63,9 @@
     transform: scale3d(1.1, 1.1, 1);
     transition: transform 0.3s ease-in-out;
 }
+select option{
+    background-color: rgb(42, 42, 42);
+}
 @media only screen and (max-width: 600px) {
     .course label{
         font-size: medium ;
