@@ -201,6 +201,9 @@
     flex-direction: column;
     justify-content: space-between;
   }
+textarea{
+  color:#000000;
+}
 
   ::-webkit-scrollbar {
     width: 10px;
