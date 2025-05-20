@@ -161,6 +161,7 @@
     border-radius: 5px;
     border: 1px solid #ccc;
     width: 300px;
+    color: #000000;
   }
   .feedback button{
     background-color: #5ce1e6;

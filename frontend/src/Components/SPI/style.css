@@ -79,6 +79,7 @@
     border:2px solid gold;
     cursor: pointer;
     color:white;
+    margin-bottom:20px;
 }
 .calCPI:hover{
     border: 2px double white;
