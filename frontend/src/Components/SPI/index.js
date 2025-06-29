@@ -41,7 +41,10 @@ class SPI extends Component {
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify({spi})
+        body: JSON.stringify({
+          spi,
+          dateTime: new Date().toLocaleString(),
+        })
       })
     }catch(err){
       console.log(err);

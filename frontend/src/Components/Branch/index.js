@@ -42,7 +42,12 @@ class Dept extends Component {
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({spi, branch: window.location.pathname.split('/')[2], sem: window.location.pathname.split('/')[3]})
+      body: JSON.stringify({
+        spi,
+        branch: window.location.pathname.split('/')[2],
+        sem: window.location.pathname.split('/')[3],
+        dateTime: new Date().toLocaleString(),
+      })
     })
   }
 
