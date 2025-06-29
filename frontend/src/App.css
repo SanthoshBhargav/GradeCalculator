@@ -1,67 +1,66 @@
-@import url('https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sedan+SC&family=Tagesschrift&family=Underdog&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sedan+SC&family=Tagesschrift&family=Underdog&display=swap");
 
-
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Comic Relief', sans-serif;
-  color:whitesmoke;
+  font-family: "Comic Relief", sans-serif;
+  color: whitesmoke;
 }
 
 .App {
   text-align: center;
-  background-image: linear-gradient(to right,rgb(88,88,88),rgb(20,20,20));
-  min-height : 100vh;
+  background-image: linear-gradient(to right, rgb(88, 88, 88), rgb(20, 20, 20));
+  min-height: 100vh;
   padding-bottom: 50px;
   min-width: 100vw;
 }
 
-.navbar{
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
 }
 
-.navbar ul{
+.navbar ul {
   list-style: none;
   display: flex;
   gap: 20px;
 }
-.h1{
+.h1 {
   color: rgb(37, 35, 112);
   font-size: 30px;
   font-weight: bold;
   text-shadow: 1px 1px 2px #fcefef;
-  font-family: url('./Font/Sunny\ Spells.ttf');
+  font-family: url("./Font/Sunny\ Spells.ttf");
 }
-.navitems{
+.navitems {
   color: white;
   font-size: 20px;
   font-weight: bold;
   text-decoration: none;
-  border:#fcefef 1px solid;
+  border: #fcefef 1px solid;
   padding: 5px 10px;
   border-radius: 15px;
 }
-.navitems:hover{
+.navitems:hover {
   color: #5ce1e6;
   cursor: pointer;
 }
-.navitems:active{
+.navitems:active {
   color: #000000;
   cursor: pointer;
 }
-.home-item:hover{
-  border:gold 2px solid;
+.home-item:hover {
+  border: gold 2px solid;
   transition: all 0.2s ease-in-out;
   transform: scale(1.05);
   padding: 5px 9px;
   box-shadow: 0px 0px 10px gold;
 }
-.grade-item:hover{
-  border:gold 2px solid;
+.grade-item:hover {
+  border: gold 2px solid;
   transition: all 0.2s ease-in-out;
   padding: 5px 9px;
   transform: scale(1.05);
@@ -82,154 +81,158 @@
     transform: rotate(360deg);
   }
 }
-  button:active{
-      color:black;
-      box-shadow: inset 0px 0px 10px black;
-      transition: all 0.3s;
-  }
-
-  .icons{
-    filter:brightness(0%);
-    margin: 3px;
-  }
-  .icons:hover{
-    filter: brightness(100%);
-  }
-  .by{
-    margin:10px 0;
-    color:#5ce1e6;
-    background-color: rgba(23, 24, 24, 0.8);
-  }
-
-  .by span{
-    text-decoration: underline;
-    cursor: pointer;
-  }
-
-  .footer a{
-    margin:0 0.1em;
-  }
-
-  .footer a:active{
-    color: rgba(0, 0, 0, 0.34) ;
-    opacity: 0.7;
-  }
-  
-  .feedback{
-    background-color: hsla(0, 22%, 50%, 0.153);
-    padding-bottom: 8vh ;
-    padding-top:1vh ;
-    margin-bottom:0;
-    margin-left:2vw;
-    margin-right: 2vw;
-    border-radius: 1em;
-  }
-  .feedback h1{
-    margin:30px auto 8px 0;
-    text-decoration: underline wavy wheat;
-    text-underline-offset: 8px;
-  }
-  .feedback p{
-    margin-bottom:30px;
-  }
-  .feedback form{
-    width:fit-content;
-    padding:10px 20px;
-    border-radius: 10px;
-    margin : auto;
-    background-color: rgba(255, 255, 255, 0.8);
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    gap: 10px;
-  }
-  .feedback textarea{
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    width: 300px;
-    height: 100px;
-  }
-  .feedback label{
-    font-size: 20px;
-    font-weight: bold;
-    color: rgb(25, 23, 29);
-    text-shadow: 1px 1px 2px #fcefef;
-  }
-  .feedback input{
-    padding: 5px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    width: 300px;
-    color: #000000;
-  }
-  .feedback button{
-    background-color: #5ce1e6;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  .feedback button:hover{
-    background-color: #004aad;
-    border:1px gold solid;
-    box-shadow: 0px 0px 10px black;
-  }
-  .feedback button:active{
-    background-color: #004aad;
-    box-shadow: inset 0px 0px 10px black;
-    transition: all 0.3s;
-  }
-  .feedback button:focus{
-    outline: none;
-  }
-  .feedback div{
-    display: flex;
-    align-items: center;
-    width: fit-content;
-    gap: 30px;
-    margin: auto;
-  }
-  .feedback div img{
-    border-radius: 1em;
-    border: 1px solid #ccc;
-  }
-  .b{
-    min-height:85vh;
-    display: flex ;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-textarea{
-  color:#000000;
+button:active {
+  color: black;
+  box-shadow: inset 0px 0px 10px black;
+  transition: all 0.3s;
 }
 
-  ::-webkit-scrollbar {
-    width: 10px;
-    height:10px;
-    background-color: rgb(88,88,88);
-  }
-  ::-webkit-scrollbar-thumb{
-    border: 2px solid rgb(88,88,88);
-    border-radius: 1em;
-    background-color: #f5f5f5;
-  }
+.icons {
+  filter: brightness(0%);
+  margin: 3px;
+}
+.icons:hover {
+  filter: brightness(100%);
+}
+.by {
+  margin: 10px 0;
+  color: #5ce1e6;
+  background-color: rgba(23, 24, 24, 0.8);
+}
 
-  @media only screen and (max-width: 600px) {
-  *{
+.by span {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.footer a {
+  margin: 0 0.1em;
+}
+
+.footer a:active {
+  color: rgba(0, 0, 0, 0.34);
+  opacity: 0.7;
+}
+
+.feedback {
+  background-color: hsla(0, 22%, 50%, 0.153);
+  padding-bottom: 8vh;
+  padding-top: 1vh;
+  margin-bottom: 0;
+  margin-left: 2vw;
+  margin-right: 2vw;
+  border-radius: 1em;
+}
+.feedback h1 {
+  margin: 30px auto 8px 0;
+  text-decoration: underline wavy wheat;
+  text-underline-offset: 8px;
+}
+.feedback p {
+  margin-bottom: 30px;
+}
+.feedback form {
+  width: fit-content;
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin: auto;
+  background-color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 10px;
+}
+.feedback textarea {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 300px;
+  height: 100px;
+}
+.feedback label {
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(25, 23, 29);
+  text-shadow: 1px 1px 2px #fcefef;
+}
+.feedback input {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 300px;
+  color: #000000;
+}
+.feedback button {
+  background-color: #5ce1e6;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.feedback button:hover {
+  background-color: #004aad;
+  border: 1px gold solid;
+  box-shadow: 0px 0px 10px black;
+}
+.feedback button:active {
+  background-color: #004aad;
+  box-shadow: inset 0px 0px 10px black;
+  transition: all 0.3s;
+}
+.feedback button:focus {
+  outline: none;
+}
+.feedback div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: fit-content;
+  gap: 30px;
+  margin: auto;
+}
+.feedback div img {
+  height: 200px;
+}
+.b {
+  min-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+textarea {
+  color: #000000;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  background-color: rgb(88, 88, 88);
+}
+::-webkit-scrollbar-thumb {
+  border: 2px solid rgb(88, 88, 88);
+  border-radius: 1em;
+  background-color: #f5f5f5;
+}
+
+@media only screen and (max-width: 700px) {
+  * {
     font-size: medium;
   }
-  .h1{
+  .h1 {
     font-size: large;
   }
-  .navitems{
+  .navitems {
     font-size: 12px;
   }
-  .navbar ul{
-      gap: 10px;
-    }
-  .feedback div{
+  .navbar ul {
+    gap: 10px;
+  }
+  .feedback div {
     flex-direction: column;
   }
+  .feedback div img{
+    display: none;
   }
+}
