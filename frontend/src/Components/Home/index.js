@@ -1,4 +1,5 @@
 import "./style.css";
+import { PiArrowFatLineDownDuotone } from "react-icons/pi";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -32,7 +33,7 @@ const Home = () => {
 
   return (
     <div>
-      <h1 className="h1 heading">Are you from IITG ??</h1>
+      <h1 className="h1 heading">For Students of IITG <div className="down-arrow"><PiArrowFatLineDownDuotone /></div> </h1>
       <div className="bg">
         <div className="bg2">
           <p className="sem-p">Select Your Sem:</p>
@@ -69,7 +70,7 @@ const Home = () => {
           </Link>
         </div>
       </div>
-      <h1 className="h1 h2">No! then choose what to calculate..</h1>
+      <h1 className="h1 h2">For Other Colleges :</h1>
       <div className="box1">
         <div className="bg1">
           <Link className="link1" to="/spi">

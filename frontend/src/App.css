@@ -220,6 +220,9 @@ textarea {
   * {
     font-size: medium;
   }
+  .b{
+    min-height: 70vh;
+  }
   .h1 {
     font-size: large;
   }

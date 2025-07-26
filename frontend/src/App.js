@@ -38,7 +38,6 @@ function App() {
                 <li><Link className='navitems home-item' to="/">HOME</Link></li>
                 <li><Link className='navitems grade-item' to="/spi">SPI</Link></li>
                 <li><Link className='navitems grade-item' to="/cpi">CPI</Link></li>
-                <li><Link className='navitems home-item' to="/branches">IITG</Link></li>
               </ul>
             </nav>
         </div>
