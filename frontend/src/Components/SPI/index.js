@@ -41,7 +41,10 @@ class SPI extends Component {
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify({spi})
+        body: JSON.stringify({
+          spi,
+          dateTime: new Date().toLocaleString(),
+        })
       })
     }catch(err){
       console.log(err);
@@ -49,17 +52,17 @@ class SPI extends Component {
     
   }
 
-  CalculateCPI = () => {
+  CalculateSPI = () => {
     const { credits, grades } = this.state;
     let totalCredits = 0;
     for (let i = 0; i < credits.length; i++) {
-      totalCredits += parseInt(credits[i]);
+      totalCredits += parseFloat(credits[i]);
     }
     let totalGradePoints = 0;
     for (let i = 0; i < credits.length; i++) {
-      let g = parseInt(grades[i]);
+      let g = parseFloat(grades[i]);
       if(g==11) g=10;
-      totalGradePoints += parseInt(credits[i]) * g;
+      totalGradePoints += parseFloat(credits[i]) * g;
     }
     let spi = totalGradePoints / totalCredits;
     try{
@@ -74,7 +77,7 @@ class SPI extends Component {
     const { spi, credits, grades } = this.state;
     let tc = 0;
     for (let i = 0; i < credits.length; i++) {
-      tc += parseInt(credits[i]);
+      tc += parseFloat(credits[i]);
     }
     return (
       <div className="Container">
@@ -101,7 +104,7 @@ class SPI extends Component {
           ))}
           <button className="add-button" type="button" onClick={this.addCourse}>Add Course</button>
           <br></br>
-          <button className="submit-button" type="button" onClick={this.CalculateCPI}> Calculate S.P.I </button>
+          <button className="submit-button" type="button" onClick={this.CalculateSPI}> Calculate S.P.I </button>
         </form>
         {spi!=0 && <h1>your spi is : <span className="s1">{spi}</span></h1>}
         {spi!=0 && <h2 className="creds">your sem {window.location.pathname.split('/')[3]} total credits : {tc}</h2>}

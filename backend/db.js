@@ -1,7 +1,7 @@
 const { MongoClient } = require('mongodb');
 
 let dbConnection;
-let MONGO_URL = process.env.MONGO_URL;
+let MONGO_URL = process.env.MONGO_URL || "mongodb://localhost:27017/";
 
 module.exports = {
     connectToDb: (cb) =>{

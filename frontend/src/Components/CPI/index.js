@@ -16,7 +16,7 @@ const CPI = (props) =>{
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify(cpi)
+        body: JSON.stringify({cpi,dateTime: new Date().toLocaleString()})
         })
     }
     const calculateCpi = (e) => {

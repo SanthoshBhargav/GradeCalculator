@@ -15,10 +15,10 @@ export let Course = (props) =>{
         GradeFunc(e.target.value, number-1);
     }   
     const incCred = (e) => {
-        CredFunc(credit+1, number-1);
+        CredFunc(credit+0.5, number-1);
     }
     const decCred = (e) => {
-        if(credit>0) CredFunc(credit-1, number-1);
+        if(credit>0) CredFunc(credit-0.5, number-1);
     }
     const DelCourse = () =>{
         delCourse( number );

@@ -2,7 +2,6 @@ import SPI from './Components/SPI';
 import CPI from './Components/CPI'; 
 import Dept from './Components/Branch';
 import Home from './Components/Home';
-import IITGHome from './Components/IITGHome';
 import igIcon from './Images/instagram.png';
 import liIcon from './Images/linkedin.png';
 import ghIcon from './Images/github.png';
@@ -26,7 +25,7 @@ function App() {
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({name, email, feedback})
+      body: JSON.stringify({name, email, feedback, dateTime: new Date().toLocaleString()})
     })
   }
   return (
@@ -39,7 +38,6 @@ function App() {
                 <li><Link className='navitems home-item' to="/">HOME</Link></li>
                 <li><Link className='navitems grade-item' to="/spi">SPI</Link></li>
                 <li><Link className='navitems grade-item' to="/cpi">CPI</Link></li>
-                <li><Link className='navitems home-item' to="/branches">IITG</Link></li>
               </ul>
             </nav>
         </div>
@@ -49,9 +47,9 @@ function App() {
             <Route exact path="/home" element={<Home />} />
             <Route exact path="/spi" element={<SPI/>} />
             <Route exact path="/cpi" element={<CPI/>} />
-            <Route exact path="/branches" element={<IITGHome />} />
             <Route exact path="/branches/:branch/:sem" element={<Dept />} />
           </Routes>
+        <a className='pic-credits' href="https://www.instagram.com/adithya_hrx/" >Pic Credits: Allu Aditya </a>
           <p className='by'>Developed by <span>G.Santhosh Bhargav</span></p>
         </div>
       </BrowserRouter>
@@ -65,7 +63,8 @@ function App() {
           <h1>Give Feedback</h1> 
           <p>(Or Send me an Anonymous Message)</p>
           <div>
-            <img src={bramhi} alt='Bharmhi' height='250px' />
+            {/* <img src={bramhi} alt='Bharmhi' height='250px' /> */}
+            <img src="https://media.tenor.com/LV_mf152z4EAAAAi/time-brand.gif" alt='gif' />
             <form onSubmit={feedbackSubmit}>
               <label htmlFor="name">Name:</label>
               <input type="text" id='name' placeholder="Name"/>

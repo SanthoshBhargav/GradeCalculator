@@ -14,8 +14,8 @@
 .course label{
     font-size: 20px;
     font-weight: bold;
-    color: rgb(25, 23, 29);
-    text-shadow: 1px 1px 2px #fcefef;
+    color: rgb(37, 35, 112);
+    text-shadow: 1px 1px 2px #ffffff;
 }
 
 .credit{
@@ -62,6 +62,9 @@
 .dropbox:hover{
     transform: scale3d(1.1, 1.1, 1);
     transition: transform 0.3s ease-in-out;
+}
+select option{
+    background-color: rgb(42, 42, 42);
 }
 @media only screen and (max-width: 600px) {
     .course label{
