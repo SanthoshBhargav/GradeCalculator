@@ -148,6 +148,9 @@
     display: inline-block;
     animation: spanDown 0.8s ease-in-out infinite;
 }
+.down-arrow img{
+    max-height: 35px;
+}
 
 
 @media screen and (max-width: 600px) {

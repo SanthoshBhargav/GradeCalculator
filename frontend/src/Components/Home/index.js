@@ -1,5 +1,5 @@
 import "./style.css";
-import { PiArrowFatLineDownDuotone } from "react-icons/pi";
+import downArrow from '../../Images/arrow-down.png';
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -33,7 +33,7 @@ const Home = () => {
 
   return (
     <div>
-      <h1 className="h1 heading">For Students of IITG <div className="down-arrow"><PiArrowFatLineDownDuotone /></div> </h1>
+      <h1 className="h1 heading">For Students of IITG <div className="down-arrow"><img src={downArrow} alt="Down Arrow" /></div> </h1>
       <div className="bg">
         <div className="bg2">
           <p className="sem-p">Select Your Sem:</p>
