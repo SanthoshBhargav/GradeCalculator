@@ -49,7 +49,7 @@ function App() {
             <Route exact path="/cpi" element={<CPI/>} />
             <Route exact path="/branches/:branch/:sem" element={<Dept />} />
           </Routes>
-        <a className='pic-credits' href="https://www.instagram.com/adithya_hrx/" >Pic Credits: Allu Aditya </a>
+        {/* <a className='pic-credits' href="https://www.instagram.com/adithya_hrx/" >Pic Credits: Allu Aditya </a> */}
           <p className='by'>Developed by <span>G.Santhosh Bhargav</span></p>
         </div>
       </BrowserRouter>
