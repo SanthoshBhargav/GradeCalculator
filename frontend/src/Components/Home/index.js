@@ -4,8 +4,10 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 const Home = () => {
-    const [sem, setSem] = useState("IV");
-    const [branch, setBranch] = useState("ece");
+    const placeholderSem = localStorage.getItem('sem') || "IV";
+    const placeholderBranch = localStorage.getItem('branch') || "ece";
+    const [sem, setSem] = useState(placeholderSem);
+    const [branch, setBranch] = useState(placeholderBranch);
     const branches = [
         { value: "bsbe", label: "BSBE" },
         { value: "ce", label: "CE" },

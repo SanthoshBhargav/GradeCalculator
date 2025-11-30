@@ -76,7 +76,8 @@ class Dept extends Component {
     if(branch === undefined) branch = 'ece';
     let sem = window.location.pathname.split('/')[3];
     if(sem === undefined) sem = 'IV';
-    console.log(branch);
+    localStorage.setItem('branch', branch);
+    localStorage.setItem('sem', sem);
     fetch(`https://grade-calculator-henna.vercel.app/branches/${branch}/${sem}`, {
       method: 'GET',
       headers: {
